@@ -8,7 +8,7 @@ import configparser
 
 # setting up the flask application
 app = Flask(__name__)
-app.config["SECRET_KEY"]='lahoua_mhamdi_key'
+app.config["SECRET_KEY"]='lahoua_key'
 socketio = SocketIO(app)
 
 
@@ -340,13 +340,11 @@ def support():
     return render_template("support.html", unanswered_messages=unanswered_messages)
 
 # reading the server configuration from the configuration file
-#config = configparser.ConfigParser()
-#config.read('config.ini')
-#host = config.get('Server', 'Host')
-#port = config.getint('Server', 'Port')
 
-host='127.0.0.1'
-port=5500
+config = configparser.ConfigParser()
+config.read('config.ini')
+host = config.get('Server', 'Host')
+port = config.getint('Server', 'Port')
 
 if __name__ == "__main__":
     socketio.run(app, host=host, port=port, debug=True)
