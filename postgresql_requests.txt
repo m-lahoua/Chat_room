@@ -1,0 +1,61 @@
+# Create Database :
+
+CREATE DATABASE BDIA;
+
+-- Connect to the new database (PostgreSQL equivalent of USE)
+\c BDIA
+
+-- Create admins table
+CREATE TABLE admins (
+    id SERIAL PRIMARY KEY,
+    admin_fullname VARCHAR(255),
+    admin_username VARCHAR(50),
+    admin_password VARCHAR(50)
+);
+
+-- Create Messages table
+CREATE TABLE messages (
+    id SERIAL PRIMARY KEY,
+    sender_pseudo VARCHAR(255),
+    message_text TEXT,
+    timestamp TIMESTAMP
+);
+
+-- Create support table
+CREATE TABLE support (
+    id SERIAL PRIMARY KEY,
+    firstname VARCHAR(255),
+    lastname VARCHAR(255),
+    email VARCHAR(255),
+    mobile VARCHAR(50),
+    support_message TEXT
+);
+
+-- Create supportadmin table
+CREATE TABLE supportadmin (
+    id SERIAL PRIMARY KEY,
+    support_fullname VARCHAR(255),
+    support_username VARCHAR(50),
+    support_password VARCHAR(50)
+);
+
+-- Create users table
+CREATE TABLE users (
+    id SERIAL PRIMARY KEY,
+    fullname VARCHAR(255),
+    pseudo VARCHAR(255),
+    username VARCHAR(50),
+    password VARCHAR(50),
+    is_approved BOOLEAN
+);
+
+
+
+
+-- Insert admin data
+INSERT INTO admins (admin_fullname, admin_username, admin_password)
+VALUES ('admin', 'admin', 'admin');
+
+-- Insert supportadmin data
+INSERT INTO supportadmin (support_fullname, support_username, support_password)
+VALUES ('admin', 'admin', 'admin');

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="/static/css/contact.css"/>
+</head>
+<body>
+    <header class="header">
+        <a href="https://www.est.um5.ac.ma/" class="logo">ESTS</a>
+        <nav class="navbar">
+            <a href="/">Login</a>
+            <a href="/signup">Signup</a>
+            <a href="/adminlogin">Admin</a>
+            <a href="/supportlogin">Support</a>
+            <a href="/contact">Contact</a>
+        </nav>
+    </header>
+    <div class="container">
+        <form method="POST" action="/sendcontact">
+            <h1>Contact Us</h1>
+            <input type="text" placeholder="First Name" name="firstname" class="placeholder-FN" required>
+            <input type="text" placeholder="Last Name" name="lastname" class="placeholder-LN" required>
+            <input type="email" placeholder="Email" name="email" class="placeholder-email" required>
+            <input type="text" placeholder="Mobile" name="mobile" class="placeholder-mobile" required>
+            <h4>Type Your Message Below :</h4>
+            <textarea placeholder="..." name="support_message" required></textarea>
+            <input value="Send" type="submit" class="btn">
+        </form>
+    </div>
+</body>
+</html>

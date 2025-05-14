@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/login.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <title>Support Login</title>
+</head>
+<body>
+    <header class="header">
+        <a href="https://www.est.um5.ac.ma/" class="logo">ESTS</a>
+        <nav class="navbar">
+            <a href="/">Login</a>
+            <a href="/signup">Signup</a>
+            <a href="/adminlogin">Admin</a>
+            <a href="/supportlogin">Support</a>
+            <a href="/contact">Contact</a>
+        </nav>
+    </header>
+    <div class="container">
+        <form method="POST" action="/supportlogin">
+            <h1>Support Login</h1>
+            <div class="input-box">
+                <i class="bi bi-person-circle"></i>
+                <input type="text" placeholder="Username" name="support_username" required>
+            </div>
+            <div class="input-box">
+                <i class="bi bi-lock"></i>
+                <input type="password" placeholder="Password" name="support_password" required>
+            </div>
+            <button type="submit" class="bn5">Login</button>
+        </form>
+    </div>
+</body>
+</html>
